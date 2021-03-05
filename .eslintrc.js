@@ -69,5 +69,6 @@ module.exports = {
     'no-restricted-syntax': 'off',
     'react/no-array-index-key': 'off',
     'react/jsx-props-no-spreading': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
 };
