@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode, useEffect, useState } from 'react';
 
 import challenges from '../../challenges.json';
 
@@ -45,6 +45,13 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     const challenge = challenges[randomChallengeIndex];
 
     setActiveChallenge(challenge as Challenge);
+
+    if (Notification.permission === 'granted') {
+      // eslint-disable-next-line no-new
+      new Notification('Novo desafio 🎉', {
+        body: `Valendo ${challenge.amount} de xp!`,
+      });
+    }
   }
 
   function resetChallenge() {
@@ -69,6 +76,10 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     setActiveChallenge(null);
     setChallengesCompleted(challengesCompleted + 1);
   }
+
+  useEffect(() => {
+    Notification.requestPermission();
+  }, []);
 
   return (
     <ChallengesContext.Provider
