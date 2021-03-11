@@ -46,10 +46,12 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
 
     setActiveChallenge(challenge as Challenge);
 
+    new Audio('/notification.mp3').play();
+
     if (Notification.permission === 'granted') {
-      // eslint-disable-next-line no-new
       new Notification('Novo desafio 🎉', {
         body: `Valendo ${challenge.amount} de xp!`,
+        silent: true,
       });
     }
   }
