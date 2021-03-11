@@ -20,16 +20,18 @@ interface ChallengesContextData {
   activeChallenge: Challenge;
   levelUp: () => void;
   startNewChallenge: () => void;
+  resetChallenge: () => void;
+  completedChallenge: () => void;
 }
 
 export const ChallengesContext = createContext({} as ChallengesContextData);
 
 export function ChallengesProvider({ children }: ChallengesProviderProps) {
   const [level, setLevel] = useState(1);
-  const [currentExperience, setCurrentExperience] = useState(25);
-  const [challengesCompleted, setChallengesCompleted] = useState(1);
+  const [currentExperience, setCurrentExperience] = useState(0);
+  const [challengesCompleted, setChallengesCompleted] = useState(0);
 
-  const [activeChallenge, setActiveChallenge] = useState(null);
+  const [activeChallenge, setActiveChallenge] = useState<Challenge>(null);
 
   // eslint-disable-next-line no-restricted-properties
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
@@ -42,7 +44,30 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
     const challenge = challenges[randomChallengeIndex];
 
-    setActiveChallenge(challenge);
+    setActiveChallenge(challenge as Challenge);
+  }
+
+  function resetChallenge() {
+    setActiveChallenge(null);
+  }
+
+  function completedChallenge() {
+    if (!activeChallenge) {
+      return;
+    }
+
+    const { amount } = activeChallenge;
+
+    let finalExperience = currentExperience + amount;
+
+    if (finalExperience > experienceToNextLevel) {
+      finalExperience -= experienceToNextLevel;
+      levelUp();
+    }
+
+    setCurrentExperience(finalExperience);
+    setActiveChallenge(null);
+    setChallengesCompleted(challengesCompleted + 1);
   }
 
   return (
@@ -55,6 +80,8 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
         activeChallenge,
         levelUp,
         startNewChallenge,
+        resetChallenge,
+        completedChallenge,
       }}
     >
       {children}

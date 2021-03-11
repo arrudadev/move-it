@@ -4,14 +4,16 @@ import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/ChallengeBox.module.css';
 
 export function ChallengeBox() {
-  const { activeChallenge } = useContext(ChallengesContext);
+  const { activeChallenge, resetChallenge, completedChallenge } = useContext(
+    ChallengesContext,
+  );
 
   function handleChallengeSucceeded() {
-    console.log('ChallengeSucceeded');
+    completedChallenge();
   }
 
   function handleChallengeFailed() {
-    console.log('ChallengeFailed');
+    resetChallenge();
   }
 
   return (
