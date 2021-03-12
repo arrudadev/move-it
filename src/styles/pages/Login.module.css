@@ -1,0 +1,121 @@
+.loginContainer {
+  height: 100vh;
+  width: 100vw;
+  
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  
+  background: url('/background-logo.png') no-repeat;
+  background-size: contain;
+  background-position: center left;
+  background-color: #5964e0;
+}
+
+.loginContainer main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.25rem;
+  
+  max-width: 992px;
+  margin: 0 auto;
+  
+  flex: 1;
+  
+  align-content: center;
+  position: relative;
+}
+
+.loginContainer main header button {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  border: 0;
+  background: transparent;
+  color: #fff;
+}
+
+.loginContainer main header button img {
+  color: #fff;
+}
+
+.loginContainer main section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.loginContainer main section article {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginContainer main section article h1 {
+  margin-top: 8rem;
+
+  font-size: 3rem;
+  font-weight: 500;
+
+  color: #fff;
+}
+
+.loginContainer main section article .loginMessageContainer {
+  display: flex;
+  
+  margin: 3rem 0;
+}
+
+.loginContainer main section article .loginMessageContainer span {
+  max-width: 300px;
+  margin-left: 1rem;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  color: #fff;
+  opacity: 0.5;
+}
+
+.loginContainer main section article .inputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.loginContainer main section article .inputContainer input {
+  border: 0;
+  border: 1.5px solid transparent;
+  border-radius: 5px 0px 0px 5px;
+
+  background: linear-gradient( 90deg, #4953b8 0%, rgba(73, 83, 184, 0.2) 100%);
+
+  font-size: 1.3rem;
+  padding: 1.65rem;
+  color: #fff;
+  
+  outline-color: #4953b8;
+}
+
+.loginContainer main section article .inputContainer input:hover {
+  border: 1.5px solid #4953b8; 
+}
+
+.loginContainer main section article .inputContainer input::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.loginContainer main section article .inputContainer button {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+
+  border: 1.5px solid #4953b8;
+  border-radius: 0px 5px 5px 0px;
+
+  outline-color: #4953b8;
+  padding: 1.65rem;
+  font-size: 2rem;
+  background: #4953b8;
+  color: #fff;
+}
