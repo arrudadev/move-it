@@ -1,14 +1,27 @@
-import { FormEvent } from 'react';
+import { ChangeEvent, FormEvent, useContext, useState } from 'react';
 
 import Head from 'next/head';
 import Router from 'next/router';
 
+import { UserContext } from '../contexts/UserContext';
 import styles from '../styles/pages/Login.module.css';
 
 export default function Login() {
-  function handleFormSubmit(event: FormEvent) {
+  const { userExists, singIn } = useContext(UserContext);
+
+  const [username, setUsername] = useState('');
+
+  async function handleFormSubmit(event: FormEvent) {
     event.preventDefault();
-    Router.push('/home');
+
+    if (await userExists(username)) {
+      await singIn(username);
+      Router.push('/home');
+    }
+  }
+
+  function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
+    setUsername(event.target.value);
   }
 
   return (
@@ -35,7 +48,11 @@ export default function Login() {
 
             <form onSubmit={handleFormSubmit}>
               <div className={styles.inputContainer}>
-                <input placeholder="Digite seu username" />
+                <input
+                  placeholder="Digite seu username"
+                  value={username}
+                  onChange={handleInputChange}
+                />
                 <button type="submit">
                   <img src="icons/arrow-right.svg" alt="Arrow Right" />
                 </button>
