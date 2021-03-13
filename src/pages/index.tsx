@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useContext, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 import Head from 'next/head';
 import Router from 'next/router';
@@ -17,6 +18,8 @@ export default function Login() {
     if (await userExists(username)) {
       await singIn(username);
       Router.push('/home');
+    } else {
+      toast.error('Usuário não foi encontrado');
     }
   }
 
@@ -61,6 +64,7 @@ export default function Login() {
           </article>
         </section>
       </main>
+      <ToastContainer />
     </div>
   );
 }
