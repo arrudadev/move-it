@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Head from 'next/head';
 import Router from 'next/router';
 
+import { MoonIcon } from '../components/MoonIcon';
 import { UserContext } from '../contexts/UserContext';
 import styles from '../styles/pages/Login.module.css';
 
@@ -35,7 +36,7 @@ export default function Login() {
       <main>
         <header>
           <button type="button">
-            <img src="icons/moon.svg" alt="Moon" />
+            <MoonIcon />
           </button>
         </header>
         <section>

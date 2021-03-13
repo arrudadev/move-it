@@ -1,0 +1,49 @@
+.sideBarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;  
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  height: 100vh;
+  width: 3rem;
+
+  padding: 2.3rem 2.2rem;
+
+  background: #fff;
+}
+
+.sideBarContainer svg.logo path {
+    fill: #5965e0;
+}
+
+.menuItem {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.sideBarContainer .menuItem svg path,
+.sideBarContainer .menuItem svg polyline,
+.sideBarContainer .menuItem svg line {
+    stroke: #666666;
+}
+
+.sideBarContainer .menuItem:hover svg path,
+.sideBarContainer .menuItemActive svg path,
+.sideBarContainer .menuItem:hover svg polyline,
+.sideBarContainer .menuItem:hover svg line {
+    stroke: #5965e0;
+}
+
+.sideBarContainer nav .menuItem {
+    margin-bottom: 30px;
+}
+
+.sideBarContainer footer .menuItem {
+    margin-top: 30px;
+}
+

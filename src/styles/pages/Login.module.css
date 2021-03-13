@@ -36,8 +36,8 @@
   color: #fff;
 }
 
-.loginContainer main header button img {
-  color: #fff;
+.loginContainer main header button svg path {
+    stroke: #fff;
 }
 
 .loginContainer main section {
