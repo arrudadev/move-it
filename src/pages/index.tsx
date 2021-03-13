@@ -1,25 +1,42 @@
-import { ChangeEvent, FormEvent, useContext, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
 import Head from 'next/head';
 import Router from 'next/router';
 
+import axios from 'axios';
+import Cookies from 'js-cookie';
+
 import { MoonIcon } from '../components/MoonIcon';
-import { UserContext } from '../contexts/UserContext';
 import styles from '../styles/pages/Login.module.css';
 
-export default function Login() {
-  const { userExists, singIn } = useContext(UserContext);
+interface GitHubUser {
+  avatar_url: string;
+  name: string;
+}
 
+export default function Login() {
   const [username, setUsername] = useState('');
+
+  async function singIn(githubUsernamer: string) {
+    const response = await axios.get(
+      `https://api.github.com/users/${githubUsernamer}`,
+    );
+    const githubUser = response.data as GitHubUser;
+
+    if (githubUser) {
+      Cookies.set('avatarUrl', String(githubUser.avatar_url));
+      Cookies.set('username', String(githubUser.name));
+    }
+  }
 
   async function handleFormSubmit(event: FormEvent) {
     event.preventDefault();
 
-    if (await userExists(username)) {
+    try {
       await singIn(username);
       Router.push('/home');
-    } else {
+    } catch (error) {
       toast.error('Usuário não foi encontrado');
     }
   }
