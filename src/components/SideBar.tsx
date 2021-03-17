@@ -54,7 +54,7 @@ export function SideBar() {
           </a>
         </Link>
 
-        <Link href="/">
+        <Link href="/ranking">
           <a
             className={
               route.includes('ranking')
