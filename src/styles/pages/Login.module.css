@@ -119,3 +119,9 @@
   background: #4953b8;
   color: #fff;
 }
+
+.loginContainer main section article .inputContainer .buttonGreen {
+  background: #4CD62B !important;
+  border: 1.5px solid #4CD62B !important;
+  outline-color: #4CD62B !important;
+}

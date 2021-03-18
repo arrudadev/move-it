@@ -74,7 +74,10 @@ export default function Login() {
                   value={username}
                   onChange={handleInputChange}
                 />
-                <button type="submit">
+                <button
+                  type="submit"
+                  className={username.length > 0 && styles.buttonGreen}
+                >
                   <img src="icons/arrow-right.svg" alt="Arrow Right" />
                 </button>
               </div>
