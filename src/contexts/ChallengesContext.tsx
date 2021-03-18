@@ -49,7 +49,6 @@ export function ChallengesProvider({
 
   const [isLevelUpModal, setIsLevelUpModal] = useState(false);
 
-  // eslint-disable-next-line no-restricted-properties
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
   function levelUp() {

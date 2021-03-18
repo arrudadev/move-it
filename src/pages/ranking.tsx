@@ -76,13 +76,11 @@ export default function Ranking({ users }: RankingProps) {
 export const getServerSideProps: GetServerSideProps = async ({
   req: request,
 }) => {
-  const {
-    level,
-    currentExperience,
-    challengesCompleted,
-    avatarUrl,
-    username,
-  } = request.cookies;
+  const { level, challengesCompleted, avatarUrl, username } = request.cookies;
+
+  function getCurrentExperience(currentLevel: number) {
+    return Math.pow((currentLevel + 1) * 4, 2);
+  }
 
   const users = [
     {
@@ -90,28 +88,28 @@ export const getServerSideProps: GetServerSideProps = async ({
       username,
       level,
       challengesCompleted,
-      currentExperience,
+      currentExperience: getCurrentExperience(Number(level)),
     },
     {
       avatarUrl: 'https://github.com/diego3g.png',
       username: 'Diego Fernandes',
       level: 10,
       challengesCompleted: 30,
-      currentExperience: 2600,
+      currentExperience: getCurrentExperience(10),
     },
     {
       avatarUrl: 'https://github.com/filipedeschamps.png',
       username: 'Filipe Deschamps',
       level: 9,
       challengesCompleted: 28,
-      currentExperience: 2400,
+      currentExperience: getCurrentExperience(9),
     },
     {
       avatarUrl: 'https://github.com/guilhermerodz.png',
       username: 'Guilherme Rodz',
       level: 5,
       challengesCompleted: 10,
-      currentExperience: 1200,
+      currentExperience: getCurrentExperience(5),
     },
   ];
 
