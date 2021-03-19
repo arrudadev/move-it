@@ -94,14 +94,14 @@ export const getServerSideProps: GetServerSideProps = async ({
       avatarUrl: 'https://github.com/diego3g.png',
       username: 'Diego Fernandes',
       level: 10,
-      challengesCompleted: 30,
+      challengesCompleted: 53,
       currentExperience: getCurrentExperience(10),
     },
     {
       avatarUrl: 'https://github.com/filipedeschamps.png',
       username: 'Filipe Deschamps',
       level: 9,
-      challengesCompleted: 28,
+      challengesCompleted: 48,
       currentExperience: getCurrentExperience(9),
     },
     {

@@ -13,7 +13,7 @@
 
   padding: 2.3rem 2.2rem;
 
-  background: #fff;
+  background: var(--background-challenge);
 }
 
 .sideBarContainer svg.logo path {
@@ -29,13 +29,14 @@
 .sideBarContainer .menuItem svg path,
 .sideBarContainer .menuItem svg polyline,
 .sideBarContainer .menuItem svg line {
-    stroke: #666666;
+    stroke: var(--text);
 }
 
 .sideBarContainer .menuItem:hover svg path,
 .sideBarContainer .menuItemActive svg path,
 .sideBarContainer .menuItem:hover svg polyline,
-.sideBarContainer .menuItem:hover svg line {
+.sideBarContainer .menuItem:hover svg line,
+.sideBarContainer .menuItem:hover svg circle {
     stroke: #5965e0;
 }
 

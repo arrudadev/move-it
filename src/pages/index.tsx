@@ -7,7 +7,7 @@ import Router from 'next/router';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-import { MoonIcon } from '../components/MoonIcon';
+import { ToggleTheme } from '../components/ToggleTheme';
 import styles from '../styles/pages/Login.module.css';
 
 interface GitHubUser {
@@ -53,7 +53,7 @@ export default function Login() {
       <main>
         <header>
           <button type="button">
-            <MoonIcon />
+            <ToggleTheme />
           </button>
         </header>
         <section>
@@ -76,7 +76,7 @@ export default function Login() {
                 />
                 <button
                   type="submit"
-                  className={username.length > 0 && styles.buttonGreen}
+                  className={username.length > 0 ? styles.buttonGreen : null}
                 >
                   <img src="icons/arrow-right.svg" alt="Arrow Right" />
                 </button>

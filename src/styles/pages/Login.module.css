@@ -9,7 +9,7 @@
   background: url('/background-logo.png') no-repeat;
   background-size: contain;
   background-position: center left;
-  background-color: #5964e0;
+  background-color: var(--login-background-page);
 }
 
 .loginContainer main {
@@ -33,11 +33,11 @@
 
   border: 0;
   background: transparent;
-  color: #fff;
+  color: var(--login-text);
 }
 
 .loginContainer main header button svg path {
-    stroke: #fff;
+    stroke: var(--login-text);
 }
 
 .loginContainer main section {
@@ -57,7 +57,7 @@
   font-size: 3rem;
   font-weight: 500;
 
-  color: #fff;
+  color: var(--login-text);
 }
 
 .loginContainer main section article .loginMessageContainer {
@@ -73,7 +73,7 @@
   font-size: 1.4rem;
   font-weight: 500;
 
-  color: #fff;
+  color: var(--login-text);
   opacity: 0.5;
 }
 
@@ -87,21 +87,21 @@
   border: 1.5px solid transparent;
   border-radius: 5px 0px 0px 5px;
 
-  background: linear-gradient( 90deg, #4953b8 0%, rgba(73, 83, 184, 0.2) 100%);
+  background: linear-gradient( 90deg, var(--login-background) 0%, rgba(73, 83, 184, 0.2) 100%);
 
   font-size: 1.3rem;
   padding: 1.65rem;
-  color: #fff;
+  color: var(--login-text);
   
-  outline-color: #4953b8;
+  outline-color: var(--login-background);
 }
 
 .loginContainer main section article .inputContainer input:hover {
-  border: 1.5px solid #4953b8; 
+  border: 1.5px solid var(--login-background); 
 }
 
 .loginContainer main section article .inputContainer input::placeholder {
-  color: #fff;
+  color: var(--login-text);
   opacity: 0.5;
 }
 
@@ -110,18 +110,18 @@
   align-items:center;
   justify-content: center;
 
-  border: 1.5px solid #4953b8;
+  border: 1.5px solid var(--login-background);
   border-radius: 0px 5px 5px 0px;
 
-  outline-color: #4953b8;
+  outline-color: var(--login-background);
   padding: 1.65rem;
   font-size: 2rem;
-  background: #4953b8;
-  color: #fff;
+  background: var(--login-background);
+  color: var(--login-text);
 }
 
 .loginContainer main section article .inputContainer .buttonGreen {
-  background: #4CD62B !important;
-  border: 1.5px solid #4CD62B !important;
-  outline-color: #4CD62B !important;
+  background: var(--login-background-button-filled) !important;
+  border: 1.5px solid var(--login-background-button-filled) !important;
+  outline-color: var(--login-background-button-filled) !important;
 }

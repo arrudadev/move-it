@@ -27,35 +27,37 @@ export default function Home({
   username,
 }: HomeProps) {
   return (
-    <ChallengesProvider
-      level={level}
-      currentExperience={currentExperience}
-      challengesCompleted={challengesCompleted}
-    >
-      <main className={styles.container}>
-        <Head>
-          <title>Move It</title>
-        </Head>
+    <div className={styles.homeBackground}>
+      <ChallengesProvider
+        level={level}
+        currentExperience={currentExperience}
+        challengesCompleted={challengesCompleted}
+      >
+        <main className={styles.container}>
+          <Head>
+            <title>Move It</title>
+          </Head>
 
-        <SideBar />
+          <SideBar />
 
-        <ExperienceBar />
+          <ExperienceBar />
 
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile avatarUrl={avatarUrl} username={username} />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
+          <CountdownProvider>
+            <section>
+              <div>
+                <Profile avatarUrl={avatarUrl} username={username} />
+                <CompletedChallenges />
+                <Countdown />
+              </div>
 
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
-      </main>
-    </ChallengesProvider>
+              <div>
+                <ChallengeBox />
+              </div>
+            </section>
+          </CountdownProvider>
+        </main>
+      </ChallengesProvider>
+    </div>
   );
 }
 

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import styles from '../styles/components/SideBar.module.css';
-import { MoonIcon } from './MoonIcon';
+import { ToggleTheme } from './ToggleTheme';
 
 export function SideBar() {
   const { route } = useRouter();
@@ -88,7 +88,7 @@ export function SideBar() {
 
       <footer>
         <span className={styles.menuItem}>
-          <MoonIcon />
+          <ToggleTheme />
         </span>
 
         <Link href="/">

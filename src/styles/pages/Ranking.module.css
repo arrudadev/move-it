@@ -9,8 +9,6 @@
 
   margin: 0 auto;
   padding: 2.5rem 2rem;
-  
-  background-color: #f2f3f5;  
 }
 
 .rankingContainer section {
@@ -26,7 +24,7 @@
   font-size: 36px;
 
   line-height: 46px;
-  color: #2e384d;
+  color: var(--title);
 
   margin-bottom: 40px;
 }
@@ -49,7 +47,7 @@
   line-height: 17px;
   text-transform: uppercase;
 
-  color: #666666;
+  color: var(--text);
   opacity: 0.5;
 }
 
@@ -60,7 +58,7 @@
 
 .rankingContainer section table tbody {
   margin-top: 24px;
-  background: #fff;
+  background: var(--background-challenge);
   border-radius: 5px;
 }
 
@@ -76,7 +74,7 @@
   font-weight: 500;
   font-size: 18px;
   border-radius: 5px 0px 0px 5px;
-  border-right: 2px solid #f2f3f5;
+  border-right: 2px solid var(--gray-line);
 }
 
 .rankingContainer section table tbody tr th:last-child {
@@ -117,7 +115,7 @@
   font-size: 20px;
 
   line-height: 24px;
-  color: #2e384d;
+  color: var(--title);
 }
 
 .rankingContainer section table tbody tr th .userLevelWrapper {

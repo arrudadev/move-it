@@ -1,3 +1,7 @@
+.homeBackground {
+  background-color: var(--home-background-page);
+}
+
 .container {
   height: 100vh;
   max-width: 992px;
@@ -5,7 +9,7 @@
   padding: 2.5rem 2rem;
   
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
 }
 
 .container section {

@@ -4,18 +4,30 @@
   box-sizing: border-box;
 }
 
-:root {
-  --white:#fff;
+:root {  
   --background: #F2F3F5;
   --gray-line: #DCDDE0;
+
   --text: #666666;
   --text-highlight: #B3B9FF;
+
   --title: #2E384D;
+
+  --white:#fff;
   --red: #E83F5B;
   --green: #4CD62B;
   --blue: #5965E0;
   --blue-dark: #4953B8;
   --blue-twitter: #2AA9E0;
+
+  --login-background-page: #5964e0;
+  --login-background: #4953b8;
+  --login-text: #fff;
+  --login-background-button-filled: #4CD62B;
+
+  --home-background-page: #f2f3f5;
+  --background-challenge: #fff;
+  --modal-overlay-background: rgba(242, 243, 245, 0.8);
 }
 
 @media (max-width: 1080px) {
