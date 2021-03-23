@@ -1,34 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+    <img alt="Moveit" title="Moveit" src="https://github.com/monteiro-alexandre/move-it/blob/master/.github/assets/logo.svg" width="220px" />
+</h1>
 
-## Getting Started
+<h4 align="center">
+  🚀 Next Level Week #04 - ReactJs
+</h4>
 
-First, run the development server:
+> Move.it is an app that combines Pomodoro's technique with physical exercises for those who spend a lot of time in front of the computer.
 
-```bash
-npm run dev
-# or
-yarn dev
+<div align="left">
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+</div>
+
+# :pushpin: Table of Contents
+
+* [Screenshots](#camera-screenshots)
+* [Installation](#construction_worker-installation)
+* [Getting Started](#runner-getting-started)
+* [Found a bug? Missing a specific feature?](#bug-issues)
+* [Contributing](#tada-contributing)
+* [License](#closed_book-license)
+
+# :camera: Screenshots
+
+<img src="https://github.com/monteiro-alexandre/move-it/blob/master/.github/assets/login.png" width="100%"/>
+<img src="https://github.com/monteiro-alexandre/move-it/blob/master/.github/assets/home.png" width="100%"/>
+<img src="https://github.com/monteiro-alexandre/move-it/blob/master/.github/assets/ranking.png" width="100%"/>
+
+# :construction_worker: Installation
+
+**You need to install [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/) first, then in order to clone the project via HTTPS, run this command:**
+
+```
+git clone https://github.com/monteiro-alexandre/move-it.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+SSH URLs provide access to a Git repository via SSH, a secure protocol. If you use a SSH key registered in your Github account, clone the project using this command:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+git clone git@github.com:monteiro-alexandre/move-it.git
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+**Install dependencies**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+yarn install
+```
 
-## Learn More
+Or
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# :runner: Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Run the following command to start the application in a development environment:
 
-## Deploy on Vercel
+```yarn dev```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# :bug: Issues
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Feel free to **file a new issue** with a respective title and description on the the [MoveIt](https://github.com/monteiro-alexandre/move-it/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**! Have a look at our [contribution guidelines](https://github.com/monteiro-alexandre/move-it/blob/master/CONTRIBUTING.md) to find out about the coding standards.
+
+# :tada: Contributing
+
+Check out the [contributing](https://github.com/monteiro-alexandre/move-it/blob/master/CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
+
+# :closed_book: License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
